@@ -88,3 +88,60 @@ let c4 = 33;
 a4 /=  12;
 b4 /= 4;
 c4 /=  11;
+
+const myStr = "I am a \"double quoted\" string inside \"double quotes\".";
+const goodStr = 'Jake asks Finn, "Hey, let\'s go on an adventure?"'; 
+//const badStr = 'Finn responds, "Let's go!"'; //this will throw an error
+
+const linkStr = '<a href="http://www.example.com" target="_blank">Link</a>';
+const escapeStr = "FirstLine\n\t\\SecondLine\nThirdLine"; 
+const ourStr = "I come first. " + "I come second.";
+
+let concatStr = "I come first. ";
+concatStr += "I come second.";
+
+let combineStr="This is the first sentence. ";
+combineStr+="This is the second sentence."
+
+const ourName = "freeCodeCamp";
+const introStr = "Hello, our name is " + ourName + ", how are you?";
+
+// Only change code below this line
+const myName = "Rjay";
+const nameStr = "My name is "+myName+" and I am well!";
+
+const anAdjective = "awesome!";
+let fccStr = "freeCodeCamp is ";
+fccStr += anAdjective; //ourStr would have the value freeCodeCamp is awesome!
+
+// Change code below this line
+const someAdjective = "awesome";
+let codingStr = "Learning to code is ";
+codingStr+=someAdjective;
+
+console.log("Alan Peter".length);
+// The value 10 would be displayed in the console. 
+// Note that the space character 
+// between "Alan" and "Peter" is also counted.
+
+let lastNameLength = 0;
+const lastName = "Lovelace";
+
+// Only change code below this line
+lastNameLength = lastName.length;
+
+const firstName = "Charles";
+const firstLetter = firstName[0];//firstLetter would have a value of the string C.
+
+// Setup
+let firstLetterOfLastName = "";
+
+// Only change code below this line
+firstLetterOfLastName = lastName[0]; 
+
+// Setup
+let helloStr = "Jello World";
+helloStr[0]="H";//this will not change the first letter
+// Only change code below this line
+helloStr = "Hello World";//only assigning new value would work
+console.log(helloStr);
