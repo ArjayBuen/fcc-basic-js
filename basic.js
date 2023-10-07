@@ -716,7 +716,7 @@ function abTest(a, b) {
   abTest(2,2);
 
   let count = 0;
-  
+
   function cc(card) {
     // Only change code below this line
   if(card==2||card==3||card==4||card==5||card==6){
@@ -746,3 +746,228 @@ function abTest(a, b) {
   }
   
   cc(2); cc(3); cc(7); cc('K'); cc('A');
+
+  const myDog = {
+    // Only change code below this line
+  name: "sky",
+  legs: 4,
+  tails:1,
+  friends:["blue","browny"]
+  
+    // Only change code above this line
+  };
+
+  // Setup
+const wearableObj = {
+    "hat": "ballcap",
+    "shirt": "jersey",
+    "shoes": "cleats"
+  };
+  
+  // Only change code below this line
+  const hatValue = wearableObj.hat;      // Change this line
+  const shirtValue = wearableObj.shirt;    // Change this line
+
+  // Setup
+const eatableObj = {
+    "an entree": "hamburger",
+    "my side": "veggies",
+    "the drink": "water"
+  };
+  
+  // Only change code below this line
+  const entreeValue = eatableObj["an entree"];   // Change this line
+  const drinkValue = eatableObj["the drink"];    // Change this line
+
+  // Setup
+const testObj = {
+    12: "Namath",
+    16: "Montana",
+    19: "Unitas"
+  };
+  
+  // Only change code below this line
+  const playerNumber = 16;  // Change this line
+  const player = testObj[playerNumber];   // Change this line
+
+  // Setup
+const myyDog = {
+    "name": "Coder",
+    "legs": 4,
+    "tails": 1,
+    "friends": ["freeCodeCamp Campers"]
+  };
+  
+  // Only change code below this line
+  myyDog.name="Happy Coder";
+
+  const myyyDog = {
+    "name": "Happy Coder",
+    "legs": 4,
+    "tails": 1,
+    "friends": ["freeCodeCamp Campers"]
+  };
+  
+  myyyDog.bark="woof";
+
+  // Setup
+const mDog = {
+    "name": "Happy Coder",
+    "legs": 4,
+    "tails": 1,
+    "friends": ["freeCodeCamp Campers"],
+    "bark": "woof"
+  };
+  
+  // Only change code below this line
+  delete mDog.tails;
+
+  // Setup
+function phoneticLookup(val) {
+    let result = "";
+  
+    // Only change code below this line
+    
+    const lookup={
+      "alpha": "Adams",
+      "bravo": "Boston",
+      "charlie": "Chicago",
+      "delta": "Denver",
+      "echo": "Easy",
+      "foxtrot": "Frank"
+    };
+    result=lookup[val];
+    // switch(val) {
+    //   case "alpha":
+    //     result = "Adams";
+    //     break;
+    //   case "bravo":
+    //     result = "Boston";
+    //     break;
+    //   case "charlie":
+    //     result = "Chicago";
+    //     break;
+    //   case "delta":
+    //     result = "Denver";
+    //     break;
+    //   case "echo":
+    //     result = "Easy";
+    //     break;
+    //   case "foxtrot":
+    //     result = "Frank";
+    // }
+  
+    // Only change code above this line
+    return result;
+  }
+  
+  phoneticLookup("charlie");
+
+  function checkObj(obj, checkProp) {
+    // Only change code below this line
+    if(obj.hasOwnProperty(checkProp)){
+      return obj[checkProp];
+    }else{
+      return "Not Found";
+    }
+    
+    // Only change code above this line
+  }
+
+  const myMusic = [
+    {
+      "artist": "Billy Joel",
+      "title": "Piano Man",
+      "release_year": 1973,
+      "formats": [
+        "CD",
+        "8T",
+        "LP"
+      ],
+      "gold": true
+    },
+    {
+      "artist": "Bruno Mars",
+      "title": "Gorilla",
+      "release_year": 2015,
+      "formats": [
+        "CD",
+        "8T",
+        "LP"
+      ]
+      
+    }
+  ];
+  
+  const myStorage = {
+    "car": {
+      "inside": {
+        "glove box": "maps",
+        "passenger seat": "crumbs"
+       },
+      "outside": {
+        "trunk": "jack"
+      }
+    }
+  };
+  
+  const gloveBoxContents = myStorage.car.inside["glove box"];
+
+  const myPlants = [
+    {
+      type: "flowers",
+      list: [
+        "rose",
+        "tulip",
+        "dandelion"
+      ]
+    },
+    {
+      type: "trees",
+      list: [
+        "fir",
+        "pine",
+        "birch"
+      ]
+    }
+  ];
+  
+  const secondTree = myPlants[1].list[1];
+  
+  // Setup
+const recordCollection = {
+    2548: {
+      albumTitle: 'Slippery When Wet',
+      artist: 'Bon Jovi',
+      tracks: ['Let It Rock', 'You Give Love a Bad Name']
+    },
+    2468: {
+      albumTitle: '1999',
+      artist: 'Prince',
+      tracks: ['1999', 'Little Red Corvette']
+    },
+    1245: {
+      artist: 'Robert Palmer',
+      tracks: []
+    },
+    5439: {
+      albumTitle: 'ABBA Gold'
+    }
+  };
+  
+  // Only change code below this line
+  function updateRecords(records, id, prop, value) {
+    if (value === "") {
+      delete records[id][prop];
+    } else if (prop !== "tracks" && value !== "") {
+      records[id][prop] = value;
+    } else if (prop === "tracks" && value !== "") {
+      if (records[id].hasOwnProperty("tracks") === false) {
+        records[id][prop] = [];
+      }
+      records[id][prop].push(value);
+    }
+    return records;
+  }
+  
+  updateRecords(recordCollection, 5439, 'artist', 'ABBA');
