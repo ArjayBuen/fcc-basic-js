@@ -971,3 +971,275 @@ const recordCollection = {
   }
   
   updateRecords(recordCollection, 5439, 'artist', 'ABBA');
+
+  const ourArray = [];
+  let o = 0;
+  
+  while (o < 5) {
+    ourArray.push(i);
+    o++;
+  } 
+
+// Setup
+const thisArray = [];
+
+// Only change code below this line
+let i=5;
+while(i!=-1){ //(i>=0)
+ thisArray.push(i);
+ i--;
+}
+
+const ourArray = [];
+
+for (let i = 0; i < 5; i++) {
+  ourArray.push(i);
+}
+//ourArray will now have the value [0, 1, 2, 3, 4].
+
+const miArray = [];
+
+// Only change code below this line
+for(let i=1;i<=5;i++){
+  miArray.push(i);//[1,2,3,4,5]
+}
+
+const ourArray = [];
+
+for (let i = 0; i < 10; i += 2) {
+  ourArray.push(i);
+}
+//ourArray will now contain [0, 2, 4, 6, 8]
+
+// Setup
+const oddNumArray = [];
+
+// Only change code below this line
+for(let i=1;i<10;i+=2){
+  oddNumArray.push(i);//[1,3,5,7,9]
+}
+
+
+const ourArray = [];
+
+for (let i = 10; i > 0; i -= 2) {
+  ourArray.push(i);
+}//ourArray will now contain [10, 8, 6, 4, 2]
+
+// Setup
+const oddArray = [];
+
+// Only change code below this line
+for(let i=9;i>0;i-=2){
+  oddArray.push(i);//[9,7,5,3,1]
+}
+
+const arrr = [10, 9, 8, 7, 6];
+
+for (let i = 0; i < arrr.length; i++) {
+   console.log(arrr[i]);//prints out all inside arrr
+}
+
+// Setup
+const myArr = [2, 3, 4, 5, 6];
+
+// Only change code below this line
+let total=0;
+for(let i=0;i<myArr.length;i++){
+  total+=myArr[i];//2+3+4+5+6=20
+}
+
+
+const arrray = [
+    [1, 2], [3, 4], [5, 6]
+  ];
+  
+  for (let i = 0; i < arrray.length; i++) {
+    for (let j = 0; j < arrray[i].length; j++) {
+      console.log(arrray[i][j]);//prints out all inside the array
+    }
+  }
+
+  function multiplyAll(arr) {
+    let product = 1;
+    // Only change code below this line
+   for(let i=0; i<arr.length; i++){
+     for(let j=0; j<arr[i].length; j++){
+       product*=arr[i][j];
+     }
+   }
+    // Only change code above this line
+    return product;
+  }
+  
+  multiplyAll([[1, 2], [3, 4], [5, 6, 7]]);
+  
+
+  // Setup
+const myArrray = [];
+let x = 10;
+
+// Only change code below this line
+ do {
+  myArrray.push(i);
+  x++;
+}while (i < 5)
+
+
+function multiply(arr, n) {
+    if (n <= 0) {
+      return 1;
+    } else {
+      return multiply(arr, n - 1) * arr[n - 1];
+    }
+  }
+
+  function sum(arr, n) {
+    // Only change code below this line
+  if(n<=0){
+    return 0;
+  }else {
+    return sum(arr,n-1)+arr[n-1];
+  }
+    // Only change code above this line
+  }
+
+
+  // Setup
+const contacts = [
+    {
+      firstName: "Akira",
+      lastName: "Laine",
+      number: "0543236543",
+      likes: ["Pizza", "Coding", "Brownie Points"],
+    },
+    {
+      firstName: "Harry",
+      lastName: "Potter",
+      number: "0994372684",
+      likes: ["Hogwarts", "Magic", "Hagrid"],
+    },
+    {
+      firstName: "Sherlock",
+      lastName: "Holmes",
+      number: "0487345643",
+      likes: ["Intriguing Cases", "Violin"],
+    },
+    {
+      firstName: "Kristian",
+      lastName: "Vos",
+      number: "unknown",
+      likes: ["JavaScript", "Gaming", "Foxes"],
+    },
+  ];
+  
+  function lookUpProfile(name, prop) {
+    // Only change code below this line
+  for (let x = 0; x < contacts.length; x++) {
+      if (contacts[x].firstName === name) {
+        if (contacts[x].hasOwnProperty(prop)) {
+          return contacts[x][prop];
+        } else {
+          return "No such property";
+        }
+      }
+    }
+    return "No such contact";
+    // Only change code above this line
+  }
+  
+  lookUpProfile("Akira", "likes");
+
+
+  function randomFraction() {
+
+    // Only change code below this line
+  
+    return Math.random();
+  
+    // Only change code above this line
+  }
+
+  function randomWholeNum() {
+    return Math.floor(Math.random()*10);
+    //will return whole number ranging from 0-9
+  }
+
+  function randomRange(myMin, myMax) {
+  
+    return Math.floor(Math.random() * (myMax - myMin + 1)) + myMin;
+  }//will return whole number that's greater than or equal to myMin and less than or equal to myMax.
+
+
+  function convertToInteger(str) {
+    return parseInt(str);
+    }
+    
+    convertToInteger("56");//will become a number
+
+    function convertToInteger(str) {
+        return parseInt(str,2)
+        }
+        
+        convertToInteger("10011");//16+0+0+2+1=19
+
+
+function findGreater(a, b) {
+    return a > b ? "a is greater" : "b is greater or equal";
+    }
+    
+    function checkEqual(a, b) {
+    return a===b? "Equal":"Not Equal";
+    }
+    
+    checkEqual(1, 2);
+   
+    function findGreaterOrEqual(a, b) {
+        return (a === b) ? "a and b are equal" 
+          : (a > b) ? "a is greater" 
+          : "b is greater";
+      }
+    
+    function checkSign(num) {
+    return (num>0) ? "positive"
+    : (num===0) ? "zero"
+    :  "negative"
+    }
+    
+    checkSign(10);
+
+
+function countup(n) {
+    if (n < 1) {
+        return [];
+    } else {
+        const countArray = countup(n - 1);
+        countArray.push(n);
+        return countArray;
+    }
+    }
+    console.log(countup(5));//[1,2,3,4,5]
+    
+    // Only change code below this line
+    function countdown(n){
+        if(n<1){
+        return [];
+        }else{
+        const countArray=countdown(n - 1);
+        countArray.unshift(n);
+        
+        return countArray;
+        }
+    }
+    // Only change code above this line
+
+    function rangeOfNumbers(startNum, endNum) {
+        if (startNum>endNum  ) {
+          return [];
+        } else {
+          const numbers = rangeOfNumbers(startNum, endNum - 1);
+          numbers.push(endNum);
+          return numbers;
+        }
+        
+      };
